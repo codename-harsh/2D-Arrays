@@ -11,7 +11,8 @@ int main(){
         }
     }
     printf("\n");
-    for(int i=0;i<n;i++){
+    //Transpose
+        for(int i=0;i<n;i++){
         for(int j=i;j<n;j++){
             //swap arr[i][j] with arr[j][i]//
             int temp = arr[i][j];
@@ -21,7 +22,20 @@ int main(){
         }
         printf("\n");
     }
-    printf("The inverse of the matrix is : \n");
+    //rotate
+    for(int i=0;i<n;i++){
+        int k= n-1;
+        int j =0;
+        while(j<k){
+            int temp = arr[i][j];
+            arr[i][j]=arr[i][k];
+            arr[i][k]=temp;
+            j++;
+            k--;
+        }
+        printf("\n");
+    }
+    printf("The 90 degree inverted matrix is : \n");
        for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
             printf("%d ",arr[i][j]);
